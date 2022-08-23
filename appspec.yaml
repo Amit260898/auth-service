@@ -1,0 +1,10 @@
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-east-2:274201610284:task-definition/amit-auth:1"
+        LoadBalancerInfo:
+          ContainerName: "amit-auth"
+          ContainerPort: "80"
+        PlatformVersion: "LATEST"
